@@ -1,0 +1,31 @@
+{
+  "name": "wpcards",
+  "version": "1.0.0",
+  "description": "different cards layouts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablofveiga/wpcards.git"
+  },
+  "keywords": [
+    "wordpress",
+    "card",
+    "section",
+    "article"
+  ],
+  "author": "pablofveiga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pablofveiga/wpcards/issues"
+  },
+  "homepage": "https://github.com/pablofveiga/wpcards#readme",
+  "devDependencies": {
+    "grunt": "^1.3.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}

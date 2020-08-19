@@ -1,0 +1,293 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+}
+
+/* HELVETICA */
+body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+}
+
+*, *>* {
+	box-sizing: border-box;
+}
+
+
+.setContainer {
+	margin: 0 0 3em;
+	padding-bottom: 1em;
+	border-bottom: 8px solid #333;
+}
+
+
+/*  SET 1 */
+.item-header {
+	max-width: 600px;
+}
+
+.img-hover-effect {
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	background: #eee url(../pics/video-load.gif) no-repeat center center;
+}
+.img-hover-effect:before {
+	display: block;
+	content: '';
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.3);
+	z-index: 2;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+
+.img-hover-effect:hover:before {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.img-hover-effect.loadingvideo .hoveringel,
+.img-hover-effect.loadingvideo:before {
+	display: none!important;
+}
+.img-hover-effect .hoveringel {
+	display: block;
+	position: absolute!important;
+	text-align: center;
+	line-height: 100%;
+	left: -30%;
+	top: 30%;
+	width: 100%;
+	height: 100%;
+	color: rgba(255,255,255,0.9);
+	/*text-shadow: 0 0 40px rgba(0,0,0,0.6);*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transform: rotate(120deg);
+	-webkit-transform: rotate(120deg);
+	transform: rotate(120deg);
+}
+
+.img-hover-effect:hover .hoveringel {
+	top: 0px;
+	left: 0px;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	-ms-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+
+.img-hover-effect .hoveringel i.fa {
+	font-size: 10px!important;
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+
+.img-hover-effect:hover .hoveringel i.fa {
+	font-size: inherit!important;
+}
+
+.img-hover-effect img {
+	display: block;
+}
+img.aspect-px {
+    /* background-color: #ccc; */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+}
+/* HOVER EFFECT 1 */
+a:hover {
+    color: #ee8f04;
+    text-decoration: none;
+}
+.img-hover-effect:hover:before {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.img-hover-effect:hover .hoveringel {
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+
+/* SET 2 */
+#set02 {}
+#set02 .container {
+	padding: 0 8px;
+}
+
+.VideoItem {
+    min-height: 230px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: 0 0 14px;
+}
+.VideoItem__textBox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255 , 0.83);
+    padding: 8px 6px;
+}
+.VideoItem__tags {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px 8px;
+}
+a.VideoItem__tags__item {
+    font-size: 11px;
+    text-transform: uppercase;
+    margin: 0 0 5px;
+    background-color: #6c0;
+    color: #fff;
+    padding: 4px 7px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.75);
+}
+
+.VideoItem__CTA {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.VideoItem__CTA .playIcon {
+    background-image: url(../pics/playcta2.svg);
+    background-size: cover;
+    display: block;
+    height: 50px;
+    opacity: 0.8;
+}
+.VideoItem {}
+.VideoItem {}
+
+@media (min-width: 769px) {
+	#set02 .container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-gap: 12px;
+	}
+	.VideoItem {
+		margin: 0;
+	}
+}
+
+
+
+/*  ### SET 3 Mixto */
+#set03.containerMixto .aside {
+	width: 100%;
+
+	/* temp rule, because has No Content */
+	min-height: 300px;
+	background-color: tan;
+}
+
+@media (min-width: 769px) {
+
+	#set03 .container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-gap: 12px;
+		width: 50%;
+		margin: 0 10px;
+	}
+/*	.VideoItem {
+		margin: 0;
+	}*/
+
+
+	#set03.containerMixto {
+		display: flex;
+	}
+	#set03.containerMixto .gridContainer {
+		width: 50%;
+	}
+	#set03.containerMixto .aside {
+		width: 50%;
+		margin-right: 10px;
+	}
+
+}
